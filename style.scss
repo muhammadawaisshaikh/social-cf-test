@@ -60,6 +60,7 @@ body{
         border-radius: 30px;
         border: 1px solid #ccc;
         transition: $transitionPointThree;
+        border: 0;
         &:focus {
             outline: none;
             border: 1px solid $green;
