@@ -1,0 +1,73 @@
+$green: #28a745;
+$transitionPointThree: 0.3s;
+
+// responsive mixins
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (max-width: 1920px) { @content ; }
+   }
+    @else if $point == laptop {
+      @media (max-width: 1366px) { @content ; }
+   }
+     @else if $point == tablet {
+      @media (max-width: 768px) { @content ; }
+   }
+    @else if $point == mobile {
+      @media (max-width: 600px)  { @content ; }
+   }
+   @else if $point == smallMobile {
+      @media (max-width: 375px)  { @content ; }
+ 
+   }
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.space{
+    padding-top: 5%;
+    @include breakpoint(mobile){
+        padding-top: 10%;
+    }
+}
+
+.input-component
+{
+    position: relative;
+    width: 350px;
+    @include breakpoint(mobile){
+        width: 100%;
+    }
+    label{
+        display: block;
+        width: 94px;
+        overflow: hidden;
+        background: #fff;
+        color: #ababab;
+        position: absolute;
+        top: -10px;
+        left: 26px;
+        text-align: center;
+        font-weight: 500;
+        transition: $transitionPointThree;
+    }
+    input{
+        display: block;
+        width: 100%;
+        padding: 10px 20px 10px 25px;
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        transition: $transitionPointThree;
+        &:focus {
+            outline: none;
+            border: 1px solid $green;
+        }
+    }
+    &:focus-within{
+        label {
+            color: $green;
+          }
+    }
+}

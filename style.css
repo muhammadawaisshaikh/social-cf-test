@@ -1,0 +1,42 @@
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif; }
+
+.space {
+  padding-top: 5%; }
+  @media (max-width: 600px) {
+    .space {
+      padding-top: 10%; } }
+
+.input-component {
+  position: relative;
+  width: 350px; }
+  @media (max-width: 600px) {
+    .input-component {
+      width: 100%; } }
+  .input-component label {
+    display: block;
+    width: 94px;
+    overflow: hidden;
+    background: #fff;
+    color: #ababab;
+    position: absolute;
+    top: -10px;
+    left: 26px;
+    text-align: center;
+    font-weight: 500;
+    transition: 0.3s; }
+  .input-component input {
+    display: block;
+    width: 100%;
+    padding: 10px 20px 10px 25px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    transition: 0.3s; }
+    .input-component input:focus {
+      outline: none;
+      border: 1px solid #28a745; }
+  .input-component:focus-within label {
+    color: #28a745; }
+
+/*# sourceMappingURL=style.css.map */
